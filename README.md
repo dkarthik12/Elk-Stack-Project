@@ -12,3 +12,13 @@ and deployed the ELK stack on a server.
 Docker is a software that offers a set of platform-as-a-service products for developing and deploying applications by packaging software in containers.
 
 Containers are lightweight, portable, virtual environments that developers can share without risking inconsistencies in development. Due to these incredibly useful features, many organizations have switched from using virtual machines to Docker containers.
+
+Activities involved the following:
+
+* Created a new vNet in Azure in a different region, within the same resource group.
+* Created a peer-to-peer network connection between the vNets.
+* Created a new VM in the new vNet that has 2vCPUs and a minimum of 4GiB of memory.
+* Added the new VM to Ansible’s hosts file in the provisioner VM.
+* Created an Ansible playbook that installs Docker and configures an ELK container.
+* Run the playbook to launch the container.
+* Restricted access to the ELK VM.
