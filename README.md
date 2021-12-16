@@ -44,3 +44,19 @@ Since Filebeat is built to collect data about specific files on remote machines,
 * Configure and deploy an ELK server.
 * Install Filebeat on any Debian-flavored Linux server.
 
+
+3. Description of the Topology
+
+The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application. By utilizing one virtual machine as the "jumpbox," the containers in other VMs can be easily modified if needed without having to login and go through each VM or container individually. Automated and simplified maintenance is key.
+
+Load balancing ensures that the application will be highly efficient, in addition to keeping traffic in the network running smoothly. By distributing HTTP traffic between webservers, the webservers and the network will not be overwhelmed by hundreds or even thousands of user requests; this is why load balancers are so crucial in cyber security, as they not only help in applications running smoothly, but also help prevent attacks such as DoS attacks.
+
+By intergrating our ELK applications with DVWA and modules such as Filebeat, the webservers can be easily monitored for further analysis, which will be useful in mitigating or spotting an attack.
+
+The details of each machine may be found below. When recreating a similar network, the number of virtual machines holding the DVWA containers is up to the creator's discretion--however, it may be necessary to change the virtual memory size of the ELK container accordingly to keep up with the extra resources being monitored.
+ 
+
+
+It should be noted that in this example, the ELK server was placed in its own virtual network, and required peering between networks in order to work with the webservers. However, the ELK server would also work if it were placed within the same virtual network.
+
+
