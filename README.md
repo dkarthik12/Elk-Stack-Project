@@ -22,3 +22,11 @@ Activities involved the following:
 * Created an Ansible playbook that installs Docker and configures an ELK container.
 * Run the playbook to launch the container.
 * Restricted access to the ELK VM.
+
+Activities involve the following:
+
+* Navigate to the ELK server’s GUI to view Filebeat installation instructions.
+* Create a Filebeat configuration file.
+* Create an Ansible playbook that copies this configuration file to the DVWA VMs and then installs Filebeat.
+* Run the playbook to install Filebeat.
+* Confirm that the ELK Stack is receiving logs.
