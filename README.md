@@ -46,7 +46,7 @@ Since Filebeat is built to collect data about specific files on remote machines,
 * Install Filebeat on any Debian-flavored Linux server.
 
 
-3. Description of the Topology
+Description of the Topology
 
 The main purpose of this network was to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application. By utilizing one virtual machine as the Jump-Box-Provisioner ,the containers in other VMs can be easily modified if needed without having to login and go through each VM or container individually. Automated and simplified maintenance was the key aspect of creating this jump box provisioner. 
 
@@ -68,7 +68,22 @@ The Elk-Server is configured to monitor web-1 and web-2 virtual machines.
 We have installed filebeat on the virtual machines. Filebeat: can handle audit logs, deprecation logs, garbage collection (gc) logs, server logs, and slow logs.
 
 Filebeat-Playbook - This playbook pulled the download, config file, and .yml file for Filebeat
+Filebeat keeps the simple things simple.
+Filebeat ships with modules for observability and security data sources that simplify the collection, parsing, and visualization of common log formats down to a single command. They achieve this by combining automatic default paths based on your operating system, with Elasticsearch Ingest Node pipeline definitions, and with Kibana dashboards. Plus, a few Filebeat modules ship with preconfigured machine learning jobs.
+
+Access policies can be found in the table below;
 
 ![image](https://user-images.githubusercontent.com/88988729/146615020-a7a6ca06-bfa0-45c3-8d82-c0d38c89b3b5.png)
+
+Elk Configuration
+Ansible was used to automate configuration of the ELK machine. 
+
+Filebeat Installation and Configuration:
+Run docker container list -a to verify that the container is on in Gitbash.
+Run: curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat >> /etc/ansible/filebeat-config.yml
+After entering the information into the Filebeat configuration file and Ansible playbook, you should have run: ansible-playbook filebeat-playbook.yml
+
+We then confirmed that the ELK stack was receiving logs. 
+
 
 
