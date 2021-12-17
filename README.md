@@ -57,6 +57,7 @@ By intergrating our ELK applications with DVWA and modules such as Filebeat, the
 The details of each machine may be found below. When recreating a similar network, the number of virtual machines holding the DVWA containers is up to the creator's discretion--however, it may be necessary to change the virtual memory size of the ELK container accordingly to keep up with the extra resources being monitored.
  
 *The ELK server was placed in its own virtual network, and required peering between networks in order to work with the webservers. However, the ELK server would also work if it were placed within the same virtual network.
+
 [Table.docx](https://github.com/dkarthik12/Elk-Stack-Project/files/7737984/Table.docx)
 
 
