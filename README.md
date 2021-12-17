@@ -60,6 +60,15 @@ The details of each machine may be found below. When recreating a similar networ
 
 ![image](https://user-images.githubusercontent.com/88988729/146613271-c787a326-4860-4999-a8da-46ddb6d33587.png)
 
+Access Policies
+The machines on the internal network are not exposed to the public Internet. Only the Jumpbox machine can accept connections from the Internet. 
 
+The Elk-Server is configured to monitor web-1 and web-2 virtual machines. 
+
+We have installed filebeat on the virtual machines. Filebeat: can handle audit logs, deprecation logs, garbage collection (gc) logs, server logs, and slow logs.
+
+Filebeat-Playbook - This playbook pulled the download, config file, and .yml file for Filebeat
+
+![image](https://user-images.githubusercontent.com/88988729/146615020-a7a6ca06-bfa0-45c3-8d82-c0d38c89b3b5.png)
 
 
