@@ -2,7 +2,8 @@
 Elk-Stack-Project
 
 
-![network diagram](https://user-images.githubusercontent.com/88988729/146433056-65a4123b-4af7-45ad-9c7d-0aba4087e145.PNG)
+![image](https://user-images.githubusercontent.com/88988729/146611234-01d97bf5-ec76-4b01-9d3c-400191feef2f.png)
+
 
 In this project I configured an ELK stack server in order to set up a cloud monitoring system. Deployed containers using Ansible and Docker, Deployed Filebeat using Ansible.
 
