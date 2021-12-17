@@ -86,6 +86,7 @@ After entering the information into the Filebeat configuration file and Ansible 
 We then confirmed that the ELK stack was receiving logs. 
 
 Beats in Use
+
 This ELK server is configured to monitor "Web-1" (10.10.0.6) and "Web-2" (10.10.0.7); both VMs have Filebeat installed in order to send syslogs and auditd logs to Kibana for easy monitoring, but by simply editing or creating new playbooks, more modules (such as kafka or apache) or shippers (such as Metricbeat) can be installed to monitor other types of logs or data.
 
 
