@@ -58,7 +58,8 @@ The details of each machine may be found below. When recreating a similar networ
  
 *The ELK server was placed in its own virtual network, and required peering between networks in order to work with the webservers. However, the ELK server would also work if it were placed within the same virtual network.
 
-[Table.docx](https://github.com/dkarthik12/Elk-Stack-Project/files/7737984/Table.docx)
+![image](https://user-images.githubusercontent.com/88988729/146613271-c787a326-4860-4999-a8da-46ddb6d33587.png)
+
 
 
 
