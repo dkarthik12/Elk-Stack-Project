@@ -76,7 +76,7 @@ Access policies can be found in the table below;
 ![image](https://user-images.githubusercontent.com/88988729/146615020-a7a6ca06-bfa0-45c3-8d82-c0d38c89b3b5.png)
 
 Elk Configuration
-Ansible was used to automate configuration of the ELK machine. 
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which limits the possibility of human error. However, it should be noted that the syntax or commands within configuration files and playbooks may need to be changed to better suit particular virtual machines or needs. For example, the command curl in the file filebeat-playbook.yml may need to be changed from to wget.
 
 Filebeat Installation and Configuration:
 Run docker container list -a to verify that the container is on in Gitbash.
@@ -84,6 +84,9 @@ Run: curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710
 After entering the information into the Filebeat configuration file and Ansible playbook, you should have run: ansible-playbook filebeat-playbook.yml
 
 We then confirmed that the ELK stack was receiving logs. 
+
+Beats in Use
+This ELK server is configured to monitor "Web-1" (10.10.0.6) and "Web-2" (10.10.0.7); both VMs have Filebeat installed in order to send syslogs and auditd logs to Kibana for easy monitoring, but by simply editing or creating new playbooks, more modules (such as kafka or apache) or shippers (such as Metricbeat) can be installed to monitor other types of logs or data.
 
 
 
