@@ -14,34 +14,31 @@ Docker is a software that offers a set of platform-as-a-service products for dev
 
 Containers are lightweight, portable, virtual environments that developers can share without risking inconsistencies in development. Due to these incredibly useful features, many organizations have switched from using virtual machines to Docker containers.
 
-Activities involved the following:
+These were the activities involved in setting up the whole process; 
 
-* Created a new vNet in Azure in a different region, within the same resource group.
+* A new vnet was created in Azure in a different region, within the Azure resource group.
 * Created a peer-to-peer network connection between the vNets.
-* Created a new VM in the new vNet that has 2vCPUs and a minimum of 4GiB of memory.
-* Added the new VM to Ansible’s hosts file in the provisioner VM.
+* Added the new VM to Ansible’s hosts file in the jump box provisioner VM.
 * Created an Ansible playbook that installs Docker and configures an ELK container.
 * Ran the playbook to launch the container.
 * Restricted access to the ELK VM.
 
-Activities involved the following:
+Next we did the following; 
 
-* Navigated to the ELK server’s GUI to view Filebeat installation instructions.
+* Navigated to the ELK server’s GUI to view the Filebeat installation instructions.
 * Created a Filebeat configuration file.
 * Created an Ansible playbook that copies this configuration file to the DVWA VMs and then installs Filebeat.
 * Ran the playbook to install Filebeat.
-* Confirm that the ELK Stack is receiving logs.
+* Confirmed that the ELK Stack is receiving logs.
 
 Description of the Topology
 
-The main purpose of this network was to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application. By utilizing one virtual machine as the Jump-Box-Provisioner ,the containers in other VMs can be easily modified if needed without having to login and go through each VM or container individually. Automated and simplified maintenance was the key aspect of creating this jump box provisioner. 
+The main purpose of this network was to expose a load-balanced and monitored instance of DVWA, the Vulnerable Web Application. By utilizing one virtual machine as the Jump-Box-Provisioner ,the containers in other VMs can be easily modified if needed without having to login and go through each VM or container individually. Automated and simplified maintenance was the key aspect of creating this jump box provisioner. 
 
 Load balancing ensures that the application will be highly efficient, in addition to keeping traffic in the network running smoothly. By distributing HTTP traffic between webservers, the webservers and the network will not be overwhelmed by hundreds or even thousands of user requests; this is why load balancers are so crucial in cyber security, as they not only help in applications running smoothly, but also help prevent attacks such as DoS attacks.
 
 By intergrating our ELK applications with DVWA and modules such as Filebeat, the webservers can be easily monitored for further analysis, which will be useful in mitigating or spotting an attack.
 
-The details of each machine may be found below. When recreating a similar network, the number of virtual machines holding the DVWA containers is up to the creator's discretion--however, it may be necessary to change the virtual memory size of the ELK container accordingly to keep up with the extra resources being monitored.
- 
 *The ELK server was placed in its own virtual network, and required peering between networks in order to work with the webservers. However, the ELK server would also work if it were placed within the same virtual network.
 
 ![image](https://user-images.githubusercontent.com/88988729/146613271-c787a326-4860-4999-a8da-46ddb6d33587.png)
