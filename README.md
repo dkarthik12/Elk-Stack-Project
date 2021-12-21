@@ -44,7 +44,7 @@ By intergrating our ELK applications with DVWA and modules such as Filebeat, the
 ![image](https://user-images.githubusercontent.com/88988729/146613271-c787a326-4860-4999-a8da-46ddb6d33587.png)
 
 Access Policies
-The machines on the internal network are not exposed to the public Internet. Only the Jumpbox machine can accept connections from the Internet. 
+The machines on the internal network are not exposed to the public Internet. Only the Jumpbox machine can accept connections from the Internet. I gave access to my host machine.
 
 The Elk-Server is configured to monitor web-1 and web-2 virtual machines. 
 
@@ -58,8 +58,13 @@ Access policies can be found in the table below;
 
 ![image](https://user-images.githubusercontent.com/88988729/146615020-a7a6ca06-bfa0-45c3-8d82-c0d38c89b3b5.png)
 
-Elk Configuration
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which limits the possibility of human error. However, it should be noted that the syntax or commands within configuration files and playbooks may need to be changed to better suit particular virtual machines or needs. For example, the command curl in the file filebeat-playbook.yml may need to be changed from to wget.
+Elk Configuration and Installation:
+
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which limits the possibility of human error. However, it should be noted that the syntax or commands within configuration files and playbooks may need to be changed to better suit particular virtual machines or needs. For example, the command curl in the file filebeat-playbook.yml may need to be changed from to wget.The main advantage that you get for automating configurations with elk are you do not have to type each command to start a application, so with ansible once you start the machine it runs the commands or scripts that are in the playbook.
+
+•	Install docker and ansible on the jumpbox, enable the playbooks automation to move all the software services to the other VMs.
+•	Add the elk VM to the hosts file
+•	run the playbooks using the ansible-playbook command, moving task to other machines assigned to receive task.
 
 Filebeat Installation and Configuration:
 Run docker container list -a to verify that the container is on in Gitbash.
@@ -84,7 +89,7 @@ We then confirmed that the ELK stack was receiving logs.
 
 Beats in Use
 
-This ELK server is configured to monitor "Web-1" (10.10.0.6) and "Web-2" (10.10.0.7); both VMs have Filebeat installed in order to send syslogs and auditd logs to Kibana for easy monitoring, but by simply editing or creating new playbooks, more modules (such as kafka or apache) or shippers (such as Metricbeat) can be installed to monitor other types of logs or data.
+This ELK server is configured to monitor "Web-1" (10.10.0.6) and "Web-2" (10.10.0.7); Both VMs have Filebeat installed in order to send syslogs and auditd logs to Kibana for easy monitoring, but by simply editing or creating new playbooks, more modules (such as kafka or apache) or shippers (such as Metricbeat) can be installed to monitor other types of logs or data.
 
 
 
